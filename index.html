@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思维写作馆 · Thinking Writer</title>
+  <meta name="description" content="每天15分钟，把模糊想法变成清晰表达。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div>
+        <span class="app-title">思维写作馆</span>
+        <span class="app-slogan">每天15分钟，把模糊想法变成清晰表达</span>
+      </div>
+    </header>
+
+    <nav class="app-nav">
+      <button class="nav-btn active" data-page="home" onclick="App.renderPage('home')">今日主题</button>
+      <button class="nav-btn" data-page="growth" onclick="App.renderPage('growth')">成长记录</button>
+      <button class="nav-btn" data-page="settings" onclick="App.renderPage('settings')">设置</button>
+    </nav>
+
+    <main id="main"></main>
+  </div>
+
+  <!-- 数据与逻辑（按依赖顺序加载） -->
+  <script src="js/themes.js"></script>
+  <script src="js/growth.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
